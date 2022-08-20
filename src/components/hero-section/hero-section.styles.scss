@@ -1,0 +1,171 @@
+.hero-section {
+    height: 95vh;
+    background-image: url(../../assets/Hero_Section.jpg);
+    background-size: cover;
+    background-position: center;
+    &__navigation-container{
+        display: flex;
+        // Align item horizontally
+        justify-content: space-around;
+
+        .navigation--1{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 1rem;
+            &-buttons{
+                text-decoration: none;
+                color: #fff;
+                font-size: .8rem;
+                font-weight: 500;
+                border-bottom: 2px solid transparent;
+                &:after {
+                    display: block;
+                    content: '';
+                    border-bottom: 2px solid #111;
+                    transform: scaleX(0);  
+                    transition: transform 250ms ease-in-out;
+                }
+                &:hover:after { transform: scaleX(1); }
+                &:after{  transform-origin:  0% 50%; }
+            }
+        }
+
+        .navigation--2 {
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            margin-top: 1rem;  
+        }
+    }
+
+    &__text-button {
+        width: 85%;
+        position: absolute;
+        left: 55%;
+        top: 50%;
+        // 50% means 50 % of its computed width / height
+        transform: translate(-45%, 0);
+        margin: 0 auto;
+        color: #fff;
+        .hero-section__text{
+            width: 40%;
+            margin-bottom: 32px;
+            &--1 {
+                font-size: 62px;
+                margin-bottom: 32px;
+                line-height: 1.05;
+            }
+        }
+
+        .hero-section__buttons{
+            margin-bottom: 32px;
+            &--1 {         
+                background-color: rgb(255, 195, 86);
+                color: black;
+                border: 1px solid rgb(255, 195, 86);
+                border-radius: 100px;
+                padding: .5rem 1rem;
+            }
+        }
+    }
+}
+
+.card-container{
+    height: 30vh;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+    .card--1{
+        height: 100%;
+        width: 20%;
+        border-radius: 3px;
+        position: relative;
+        overflow: hidden;
+
+        .card--1-image{
+            height: 100%;
+            width: 100%;
+            background-image: url(../../assets/Speakers.jpg);
+            background-size: cover;
+        }
+        &:hover .card--1-image,
+        &:focus .card--1-image {
+        transform: scale(1.2);
+        }
+    }
+    .card--2{
+        height: 100%;
+        width: 20%;
+        background-image: url(../../assets/Headphones_Cat_BR.jpg);
+        background-size: cover;
+        border-radius: 3px;
+        position: relative;
+    }
+    .card--3{
+        height: 100%;
+        width: 20%;
+        background-image: url(../../assets/TV_Cat_BR.jpg);
+        background-size: cover;
+        border-radius: 3px;
+        position: relative;
+
+        &:hover{
+
+        }
+    }
+}
+
+.card-text{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #111;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+
+
+// .speaker-section-content {
+//     display: none;
+//     position: absolute;
+//     margin-top: 3rem;
+//     margin-left: 2rem;
+    
+//     ul {
+//         list-style: none;
+//     }
+// }
+
+// .speaker-section-container {
+
+//     &:hover{
+//         .speaker-section-content{
+//             display: block;
+//         }
+//     }
+// }
+
+// .navigation--1-drop-down-buttons {
+//     font-size: 1.5rem;
+//     text-decoration: none;
+//     font-weight: 500;
+//     color: black;
+//     border-bottom: 2px solid transparent;
+//     &:after {
+//         display: block;
+//         content: '';
+//         border-bottom: 2px solid #111;
+//         transform: scaleX(0);  
+//         transition: all 250ms ease-in-out;
+//     }
+//     &:hover:after { transform: scaleX(1);}
+//     &:after{  transform-origin:  0% 50%; }
+// }
